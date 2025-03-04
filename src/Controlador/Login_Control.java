@@ -19,6 +19,8 @@ public class Login_Control {
                 // Validar credenciales (aquí puedes agregar tu lógica de validación)
                 if (usuario.equals("AdministradorIPC1A") && password.equals("ipc1A1s2025")) {
                     JOptionPane.showMessageDialog(vista, "Bienvenido al sistema");
+                    System.out.println("Hola, mundo!");
+                    
                     // Aquí puedes abrir la pantalla principal
                 } else {
                     JOptionPane.showMessageDialog(vista, "Usuario o contraseña incorrectos");
