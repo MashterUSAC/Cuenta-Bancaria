@@ -5,6 +5,7 @@ public class Cliente {
     private String nombre;
     private String apellido;
 
+    // Constructor
     public Cliente(String CUI, String nombre, String apellido) {
         this.CUI = CUI;
         this.nombre = nombre;

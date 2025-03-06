@@ -5,6 +5,7 @@ public class Cuenta {
     private Cliente cliente;
     private double saldo;
 
+    // Constructor
     public Cuenta(String idCuenta, Cliente cliente) {
         this.idCuenta = idCuenta;
         this.cliente = cliente;
@@ -24,6 +25,7 @@ public class Cuenta {
         return saldo;
     }
 
+    // Métodos para operaciones bancarias
     public void depositar(double monto) {
         if (monto > 0) {
             saldo += monto;
