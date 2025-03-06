@@ -7,12 +7,12 @@ import javax.swing.JLabel;
 import javax.swing.JPasswordField;
 import javax.swing.JTextField;
 
-public class Login_Vista extends JFrame {
-    private final JTextField txtUsuario;
-    private final JPasswordField txtPassword;
-    private final JButton btnLogin;
+public class LoginView extends JFrame {
+    private JTextField txtUsuario;
+    private JPasswordField txtPassword;
+    private JButton btnLogin;
 
-    public Login_Vista() {
+    public LoginView() {
         setTitle("Inicio de Sesión - USAC Bank");
         setSize(300, 200);
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);

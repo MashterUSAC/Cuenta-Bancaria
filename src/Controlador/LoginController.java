@@ -3,11 +3,14 @@ package controlador;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import javax.swing.JOptionPane;
-import vista.Login_Vista;
+import vista.LoginView;
+import vista.MainView;
 
-public class Login_Control {
+public class LoginController {
+    private LoginView vista;
 
-    public Login_Control(Login_Vista vista) {
+    public LoginController(LoginView vista) {
+        this.vista = vista;
 
         // Agregar acción al botón de login
         vista.getBtnLogin().addActionListener(new ActionListener() {
@@ -19,8 +22,13 @@ public class Login_Control {
                 // Validar credenciales (aquí puedes agregar tu lógica de validación)
                 if (usuario.equals("AdministradorIPC1A") && password.equals("ipc1A1s2025")) {
                     JOptionPane.showMessageDialog(vista, "Bienvenido al sistema");
-                    
-                    // Aquí puedes abrir la pantalla principal
+
+                    // Cerrar la ventana de inicio de sesión
+                    vista.dispose();
+
+                    // Abrir la pantalla principal
+                    MainView vistaPrincipal = new MainView();
+                    MainController controladorPrincipal = new MainController(vistaPrincipal);
                 } else {
                     JOptionPane.showMessageDialog(vista, "Usuario o contraseña incorrectos");
                 }
